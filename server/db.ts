@@ -1,1 +1,1 @@
-import mysql from"mysql2/promise";import"dotenv/config";if(!process.env.DATABASE_URL)throw new Error("DATABASE_URL is required");export const db=mysql.createPool({uri:process.env.DATABASE_URL,connectionLimit:10,enableKeepAlive:true});
+import mysql from"mysql2/promise";import"dotenv/config";const databaseUrl=process.env.DATABASE_URL;if(!databaseUrl)throw new Error("DATABASE_URL is required");export const db=mysql.createPool(databaseUrl);
