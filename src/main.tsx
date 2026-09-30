@@ -1,2 +1,1 @@
-import React from "react";import{createRoot}from"react-dom/client";import{App}from"./App";import"./styles.css";
-import{TenantProvider}from"./TenantContext";createRoot(document.getElementById("root")!).render(<React.StrictMode><TenantProvider><App/></TenantProvider></React.StrictMode>);
+import React from"react";import{createRoot}from"react-dom/client";import{App}from"./App";import"./styles.css";import{TenantProvider}from"./TenantContext";import{I18nProvider}from"./I18nContext";createRoot(document.getElementById("root")!).render(<React.StrictMode><I18nProvider><TenantProvider><App/></TenantProvider></I18nProvider></React.StrictMode>);
