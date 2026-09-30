@@ -1,0 +1,1 @@
+import type{UserRole}from"./models";export type SessionUser={id:string;email:string;name:string;role:UserRole};export function routeAfterLogin(user:SessionUser,tenantSlug?:string){if(user.role==="super_admin")return"/admin";if(user.role==="owner"||user.role==="manager"||user.role==="staff")return tenantSlug?`/dashboard/${tenantSlug}`:"/onboarding";return"/";}
