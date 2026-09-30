@@ -10,9 +10,9 @@ export function TenantProvider({children}:{children:ReactNode}){
  async function refresh(){
   try{
    const r=await api.tenants();
-   setTenants(r.tenants);
+   const list:CurrentTenant[]=r.tenants;setTenants(list);
    const saved=localStorage.getItem("nfoodz_tenant");
-   setTenant(r.tenants.find(x=>x.slug===saved)||r.tenants[0]||null);
+   setTenant(list.find((x:CurrentTenant)=>x.slug===saved)||list[0]||null);
   }catch{setTenants([]);setTenant(null)}
   finally{setLoading(false)}
  }
