@@ -1,0 +1,1 @@
+export async function uploadProductImage(slug:string,productId:string,file:File){const body=new FormData();body.append("image",file);const r=await fetch(`/api/media/${encodeURIComponent(slug)}/products/${productId}`,{method:"POST",credentials:"include",body});const d=await r.json().catch(()=>null);if(!r.ok)throw new Error(d?.error||"UPLOAD_FAILED");return d as{url:string};}
