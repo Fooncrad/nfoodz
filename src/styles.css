@@ -6,3 +6,5 @@
 .openBadge,.closedBadge{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800}.openBadge{background:#e7f8ef;color:#16784e}.closedBadge{background:#fff0e4;color:#b54708}
 
 .imageUpload{font-size:12px;color:var(--blue);cursor:pointer}.imageUpload input{display:none}.dangerLink{border:0;background:none;color:#b42318;padding:0;text-align:right;cursor:pointer;font-size:12px}
+
+.languageSwitch{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 9px;color:#53647a}.languageSwitch select{border:0;outline:0;background:transparent;color:inherit;cursor:pointer}.languageSwitch span{font-size:16px}[dir="ltr"] .quick svg:last-child{margin-left:auto;margin-right:0}[dir="ltr"] aside button{text-align:left}@media(max-width:560px){.languageSwitch{padding:7px}.languageSwitch select{max-width:92px}header{gap:8px}.actions{gap:6px}}
