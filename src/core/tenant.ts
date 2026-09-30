@@ -1,0 +1,1 @@
+import type{Tenant}from"./models";export const menuPath=(tenant:Pick<Tenant,"slug">)=>`/menu/${tenant.slug}`;export const dashboardPath=(tenant:Pick<Tenant,"slug">)=>`/dashboard/${tenant.slug}`;export function assertTenantAccess(resourceTenantId:string,currentTenantId:string){if(resourceTenantId!==currentTenantId)throw new Error("TENANT_ACCESS_DENIED");}
