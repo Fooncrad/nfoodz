@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "dev:api": "tsx server/index.ts",
-    "build": "tsc && vite build",
+    "build": "npm run typecheck:client && npm run typecheck:server && vite build && esbuild server/index.ts --bundle --platform=node --format=esm --packages=external --outfile=dist/index.js",
     "preview": "vite preview",
     "start:api": "tsx server/index.ts",
     "check": "npm run typecheck:client && npm run typecheck:server && vite build",
     "typecheck:client": "tsc --noEmit",
-    "typecheck:server": "tsc -p tsconfig.server.json --noEmit"
+    "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -39,6 +40,12 @@
     "@types/jsonwebtoken": "latest",
     "@types/multer": "latest",
     "@types/node": "latest",
-    "@types/qrcode": "latest"
+    "@types/qrcode": "latest",
+    "esbuild": "latest"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
