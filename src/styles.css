@@ -219,3 +219,20 @@ html[data-theme="dark"] .emAdmin{background:#0d1624;color:#f3f6fa}html[data-them
 
 /* Real marketplace */
 .marketV3{max-width:1380px;margin:auto}.marketSearchV3{display:grid;grid-template-columns:1fr 190px;gap:10px;margin-top:24px}.marketSearchV3>div{display:flex;align-items:center;gap:10px;background:#fff;color:#17233d;border-radius:16px;padding:0 16px}.marketSearchV3 input{width:100%;border:0;outline:0;background:transparent}.marketSearchV3 select{border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:0 14px;background:#17233d;color:#fff}.marketSectorStrip{padding:18px 24px}.marketSectorStrip>div{display:flex;gap:10px;overflow:auto}.marketSectorStrip button{white-space:nowrap;border:1px solid var(--border);background:var(--surface);color:inherit;border-radius:999px;padding:10px 14px;font-weight:800}.marketSectorStrip small{margin-inline-start:8px;opacity:.55}.marketGridV3{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.marketCoverReal{height:190px;background:linear-gradient(145deg,#17233d,#243653);position:relative;display:grid;place-items:center;overflow:hidden}.marketCoverReal img{width:100%;height:100%;object-fit:cover}.marketProducts{padding:26px 24px}.marketProductGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.marketProductGrid button{text-align:start;border:1px solid var(--border);background:var(--surface);color:inherit;border-radius:20px;padding:0 0 14px;overflow:hidden}.marketProductGrid button>div{height:150px;background:rgba(127,127,127,.08);display:grid;place-items:center}.marketProductGrid img{width:100%;height:100%;object-fit:cover}.marketProductGrid span,.marketProductGrid b,.marketProductGrid small{display:block;padding:0 14px}.marketProductGrid span{margin-top:12px;font-size:11px;opacity:.6}.marketProductGrid b{margin-top:5px}.marketProductGrid small{margin-top:7px;opacity:.7}.marketEmpty{margin:0 24px;padding:34px;border:1px dashed var(--border);border-radius:20px;text-align:center;opacity:.7}@media(max-width:900px){.marketGridV3{grid-template-columns:repeat(2,1fr)}.marketProductGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.marketSearchV3{grid-template-columns:1fr}.marketGridV3{grid-template-columns:1fr}.marketProductGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.marketCoverReal{height:170px}}
+
+
+/* Super admin sidebar refinement — preserve NFOODZ identity */
+.emSide{width:248px;padding:20px 12px 16px;gap:16px;box-shadow:12px 0 34px rgba(9,18,32,.08)}
+.emBrand{padding:4px 8px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.emBrand>span{width:38px;height:38px;border-radius:11px}
+.emSide nav{gap:10px}
+.emSide nav>div{gap:3px}
+.emSide nav>div>small{padding:7px 10px 3px;font-size:9px;letter-spacing:.04em;color:#8090a6}
+.emSide nav button{min-height:40px;padding:9px 10px;border-radius:10px;font-size:12px;transition:background .16s ease,color .16s ease,transform .16s ease}
+.emSide nav button:hover{transform:translateX(-2px)}
+.emSide nav button.active{background:linear-gradient(90deg,rgba(255,100,46,.16),rgba(255,100,46,.05));color:#ff936e;box-shadow:inset -2px 0 #ff642e}
+.emSide nav button svg{width:16px;height:16px}
+.emHelp{padding:12px;border-radius:12px}
+.emHelp b{font-size:12px}.emHelp p{margin:5px 0 10px;line-height:1.5}
+.emPage{max-width:none;width:100%;margin:0;padding:30px clamp(22px,3vw,48px)}
+@media(max-width:760px){.emSide{width:min(84vw,286px);padding-top:18px}.emSide nav button{min-height:43px}.emPage{padding:18px 14px}}
